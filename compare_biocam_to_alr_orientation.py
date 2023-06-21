@@ -45,11 +45,17 @@ if __name__ == "__main__":
 
 
 # Example usage:
+# Original BioCam IMU log and ALR engineering log corrected for time drift based on messages over serial only and applying offsets to time, roll and pitch to make the BioCam and ALR redings to line up:
 # python ./compare_biocam_to_alr_orientation.py D:/cruises/2022/insite/comparison_attitude_BioCam-ALR/20220923_130737_alr_bc4k15c_mapping/20220923_125146_imu.csv D:/cruises/2022/insite/comparison_attitude_BioCam-ALR/20220923_130737_alr_bc4k15c_mapping/corrected_engineering_log.csv -t -1.6 -r 1.9 -p -0.5
 # python ./compare_biocam_to_alr_orientation.py D:/cruises/2022/insite/comparison_attitude_BioCam-ALR/20221004_153010_alr_bc4k15c_mapping/20221004_150501_imu.csv D:/cruises/2022/insite/comparison_attitude_BioCam-ALR/20221004_153010_alr_bc4k15c_mapping/engineering_log_corrected.csv -t -1.6 -r 1.9 -p -0.5
 # python ./compare_biocam_to_alr_orientation.py D:/cruises/2022/insite/comparison_attitude_BioCam-ALR/20221006_095110_alr_bc4k15c_mapping/20221006_092720_imu.csv D:/cruises/2022/insite/comparison_attitude_BioCam-ALR/20221006_095110_alr_bc4k15c_mapping/engineering_log_corrected.csv -t -1.6 -r 1.9 -p -0.5
 
-# After correcting engineering log for time and orientation offsets with apply_offsets_to_engineering_log.py:
+# After correcting engineering log for time and orientation offsets with apply_offsets_to_engineering_log.py (using the values found above). Files now line up, so no offsets are needed:
 # python ./compare_biocam_to_alr_orientation.py D:/cruises/2022/insite/comparison_attitude_BioCam-ALR/20220923_130737_alr_bc4k15c_mapping/20220923_125146_imu.csv D:/cruises/2022/insite/comparison_attitude_BioCam-ALR/20220923_130737_alr_bc4k15c_mapping/engineering_log_corrected_2.csv
 # python ./compare_biocam_to_alr_orientation.py D:/cruises/2022/insite/comparison_attitude_BioCam-ALR/20221004_153010_alr_bc4k15c_mapping/20221004_150501_imu.csv D:/cruises/2022/insite/comparison_attitude_BioCam-ALR/20221004_153010_alr_bc4k15c_mapping/engineering_log_corrected_2.csv
 # python ./compare_biocam_to_alr_orientation.py D:/cruises/2022/insite/comparison_attitude_BioCam-ALR/20221006_095110_alr_bc4k15c_mapping/20221006_092720_imu.csv D:/cruises/2022/insite/comparison_attitude_BioCam-ALR/20221006_095110_alr_bc4k15c_mapping/engineering_log_corrected_2.csv
+
+# After correcting engineering log for time and orientation offsets in opposite direction (for testing) with apply_offsets_to_engineering_log.py (turns out to be wrong - don't use these.)
+# python ./compare_biocam_to_alr_orientation.py D:/cruises/2022/insite/comparison_attitude_BioCam-ALR/20220923_130737_alr_bc4k15c_mapping/20220923_125146_imu.csv D:/cruises/2022/insite/comparison_attitude_BioCam-ALR/20220923_130737_alr_bc4k15c_mapping/engineering_log_corrected_3_minus_1_9_roll.csv
+# python ./compare_biocam_to_alr_orientation.py D:/cruises/2022/insite/comparison_attitude_BioCam-ALR/20221004_153010_alr_bc4k15c_mapping/20221004_150501_imu.csv D:/cruises/2022/insite/comparison_attitude_BioCam-ALR/20221004_153010_alr_bc4k15c_mapping/engineering_log_corrected_3_minus_1_9_roll.csv
+# python ./compare_biocam_to_alr_orientation.py D:/cruises/2022/insite/comparison_attitude_BioCam-ALR/20221006_095110_alr_bc4k15c_mapping/20221006_092720_imu.csv D:/cruises/2022/insite/comparison_attitude_BioCam-ALR/20221006_095110_alr_bc4k15c_mapping/engineering_log_corrected_3_minus_1_9_roll.csv
