@@ -22,16 +22,20 @@ if __name__ == "__main__":
 
 
 # Example usage:
-# Applying time, roll and pitch offset found using compare_biocam_to_alr_orientation.py
+# Applying time, roll and pitch offset found using compare_biocam_to_alr_orientation.py to insite datasets
 '''
 python ./apply_offsets_to_engineering_log.py D:/cruises/2022/insite/comparison_attitude_BioCam-ALR/20220923_130737_alr_bc4k15c_mapping/corrected_engineering_log.csv D:/cruises/2022/insite/comparison_attitude_BioCam-ALR/20220923_130737_alr_bc4k15c_mapping/engineering_log_corrected_2.csv -1.6 0.033161 -0.008727
 python ./apply_offsets_to_engineering_log.py D:/cruises/2022/insite/comparison_attitude_BioCam-ALR/20221004_153010_alr_bc4k15c_mapping/engineering_log_corrected.csv D:/cruises/2022/insite/comparison_attitude_BioCam-ALR/20221004_153010_alr_bc4k15c_mapping/engineering_log_corrected_2.csv -1.6 0.033161 -0.008727
 python ./apply_offsets_to_engineering_log.py D:/cruises/2022/insite/comparison_attitude_BioCam-ALR/20221006_095110_alr_bc4k15c_mapping/engineering_log_corrected.csv D:/cruises/2022/insite/comparison_attitude_BioCam-ALR/20221006_095110_alr_bc4k15c_mapping/engineering_log_corrected_2.csv -1.6 0.033161 -0.008727
 '''
 
-# Applying time, roll and pitch offset found using compare_biocam_to_alr_orientation.py, but apply the inverse of the roll and pitch offsets for testing (turns out this does not make sense indeed - don't use this!)
+# Applying time, roll and pitch offset found using compare_biocam_to_alr_orientation.py to DY152 mapping datasets
 '''
-python ./apply_offsets_to_engineering_log.py D:/cruises/2022/insite/comparison_attitude_BioCam-ALR/20220923_130737_alr_bc4k15c_mapping/corrected_engineering_log.csv D:/cruises/2022/insite/comparison_attitude_BioCam-ALR/20220923_130737_alr_bc4k15c_mapping/engineering_log_corrected_3_minus_1_9_roll.csv -1.6 -0.033161 0.008727
-python ./apply_offsets_to_engineering_log.py D:/cruises/2022/insite/comparison_attitude_BioCam-ALR/20221004_153010_alr_bc4k15c_mapping/engineering_log_corrected.csv D:/cruises/2022/insite/comparison_attitude_BioCam-ALR/20221004_153010_alr_bc4k15c_mapping/engineering_log_corrected_3_minus_1_9_roll.csv -1.6 -0.033161 0.008727
-python ./apply_offsets_to_engineering_log.py D:/cruises/2022/insite/comparison_attitude_BioCam-ALR/20221006_095110_alr_bc4k15c_mapping/engineering_log_corrected.csv D:/cruises/2022/insite/comparison_attitude_BioCam-ALR/20221006_095110_alr_bc4k15c_mapping/engineering_log_corrected_3_minus_1_9_roll.csv -1.6 -0.033161 0.008727
+python ./apply_offsets_to_engineering_log.py J:/raw/2022/dy152/alr/20220712_213257_alr_bc4k15c_mapping/nav/alr_log/corrected_engineering_log_m47.csv J:/raw/2022/dy152/alr/20220712_213257_alr_bc4k15c_mapping/nav/alr_log/corrected_engineering_log_m47_2.csv -1.8 0.0279253 -0.008727
+python ./apply_offsets_to_engineering_log.py J:/raw/2022/dy152/alr/20220713_073311_alr_bc4k15c_mapping/nav/alr_log/corrected_engineering_log_m48.csv J:/raw/2022/dy152/alr/20220713_073311_alr_bc4k15c_mapping/nav/alr_log/corrected_engineering_log_m48_2.csv -1.8 0.0279253 -0.008727
+python ./apply_offsets_to_engineering_log.py J:/raw/2022/dy152/alr/20220714_131120_alr_bc4k15c_mapping/nav/alr_log/corrected_engineering_log_m50.csv J:/raw/2022/dy152/alr/20220714_131120_alr_bc4k15c_mapping/nav/alr_log/corrected_engineering_log_m50_2.csv -1.8 0.0279253 -0.008727
+python ./apply_offsets_to_engineering_log.py J:/raw/2022/dy152/alr/20220714_204123_alr_bc4k15c_mapping/nav/alr_log/corrected_engineering_log_m51.csv J:/raw/2022/dy152/alr/20220714_204123_alr_bc4k15c_mapping/nav/alr_log/corrected_engineering_log_m51_2.csv -1.8 0.0279253 -0.008727
+python ./apply_offsets_to_engineering_log.py J:/raw/2022/dy152/alr/20220719_175749_alr_bc4k15c_mapping/nav/alr_log/corrected_engineering_log_m64.csv J:/raw/2022/dy152/alr/20220719_175749_alr_bc4k15c_mapping/nav/alr_log/corrected_engineering_log_m64_2.csv -1.8 0.0279253 -0.008727
+python ./apply_offsets_to_engineering_log.py J:/raw/2022/dy152/alr/20220720_094049_alr_bc4k15c_mapping/nav/alr_log/corrected_engineering_log_m65.csv J:/raw/2022/dy152/alr/20220720_094049_alr_bc4k15c_mapping/nav/alr_log/corrected_engineering_log_m65_2.csv -1.8 0.0279253 -0.008727
+python ./apply_offsets_to_engineering_log.py J:/raw/2022/dy152/alr/20220720_200914_alr_bc4k15c_mapping/nav/alr_log/corrected_engineering_log_m66.csv J:/raw/2022/dy152/alr/20220720_200914_alr_bc4k15c_mapping/nav/alr_log/corrected_engineering_log_m66_2.csv -1.8 0.0279253 -0.008727
 '''
